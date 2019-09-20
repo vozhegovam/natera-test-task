@@ -33,6 +33,15 @@ public class DirectedGraphTest {
     }
 
     @Test
+    public void getIsWeighedValue() {
+        Assert.assertFalse(graph.isWeighted());
+        Edge<Integer> fourSixEdge = new Edge<>(4, 6, 5);
+        graph.addVertex(6)
+                .addEdge(fourSixEdge);
+        Assert.assertTrue(graph.isWeighted());
+    }
+
+    @Test
     public void addVertex() {
         graph.addVertex(5);
         Assert.assertTrue(graph.getGraphStructure().containsKey(5));

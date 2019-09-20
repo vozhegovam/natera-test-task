@@ -4,6 +4,10 @@ import graph.simple_entries.Edge;
 
 public class DirectedGraph<V> extends AbstractGraph<V> {
 
+    public DirectedGraph(){
+        this.isDirected = true;
+    }
+
     @Override
     public Graph<V> addEdge(Edge<V> edge) {
 
@@ -13,8 +17,4 @@ public class DirectedGraph<V> extends AbstractGraph<V> {
         return this;
     }
 
-    @Override
-    public boolean isDirected() {
-        return true;
-    }
 }

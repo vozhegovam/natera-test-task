@@ -27,4 +27,6 @@ public interface Graph<V> {
     Map<V, List<Edge<V>>> getGraphStructure();
 
     boolean isDirected();
+
+    boolean isWeighted();
 }
